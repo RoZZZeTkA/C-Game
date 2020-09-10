@@ -1,0 +1,17 @@
+#include "loot.h"
+
+Loot::Loot(QPointF initPos, int lootType)
+{
+    switch(lootType)
+    {
+    case 1:
+    setPixmap(QPixmap(":/images/aidKit.png"));
+    //enum {Type = UserType + 15};
+    break;
+    case 2:
+    setPixmap(QPixmap(":/images/ammo.png"));
+    enum {Type = UserType + 16};
+    break;
+    }
+    setPos(initPos);
+}

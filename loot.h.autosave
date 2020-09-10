@@ -1,0 +1,17 @@
+#ifndef LOOT_H
+#define LOOT_H
+
+
+#include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
+#include <QDebug>
+
+class Loot : public QObject, public QGraphicsPixmapItem
+{
+public:
+    Loot(QPointF initPos, int lootType);
+protected:
+    int type() const;
+};
+
+#endif // LOOT_H
